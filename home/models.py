@@ -11,4 +11,8 @@ from wagtail.wagtailimages.blocks import ImageChooserBlock
 from wagtail.wagtailadmin.edit_handlers import (FieldPanel, InlinePanel, MultiFieldPanel, PageChooserPanel, StreamFieldPanel,)
 
 class HomePage(Page):
-    body = models.CharField(max_length=255, null=True, blank=True)
+    body = RichTextField(null=True, blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('body'),
+    ]

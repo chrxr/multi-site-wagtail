@@ -3,9 +3,13 @@
 <div class='header'>
 {% with settings.utils.SiteBranding as branding %}
 
+<div class='logo-container'>
 {% if branding.site_logo %}
-  {% image branding.site_logo fill-200x200 %}
+<a href='/'>
+  {% image branding.site_logo fill-200x200 class='logo' %}
+</a>
 {% endif %}
+</div>
 
 {% endwith %}
 

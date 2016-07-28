@@ -2,16 +2,11 @@
 {% get_site_root as site_root %}
 
 {# Implementation of bootstrap theme dropdown menu - shows top level links and their children #}
-<div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
+<nav class="top-menu">
+    <ul class="menu-list">
         {% for menuitem in menuitems %}
-            <li class="{% if menuitem.show_dropdown %}dropdown{% endif %}{% if menuitem.active %} active{% endif %}">
-                {% if menuitem.show_dropdown %}
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">{{ menuitem.title }} <b class="caret"></b></a>
-                    {% top_menu_children parent=menuitem %}
-                {% else %}
-                    <a href="{% pageurl menuitem %}">{{ menuitem.title }}</a>
-                {% endif %}
+            <li class='menu-item'>
+                <a href="{% pageurl menuitem %}">{{ menuitem.title }}</a>
             </li>
         {% endfor %}
     </ul>

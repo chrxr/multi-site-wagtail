@@ -13,6 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/normalize.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/multisite.css' %}">
 
         <!-- The following block inserts branding specific code inline into the head of the base template -->
@@ -31,9 +32,9 @@
         {% wagtailuserbar %}
 
         {% include "includes/header.html" %}
-
+        <div class='body-container'>
         {% block content %}{% endblock %}
-
+        </div>
         {% include "includes/footer.html" %}
 
         {# Global javascript #}
