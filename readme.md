@@ -2,7 +2,7 @@
 
 This repo contains an example implementation of Wagtail, demonstrating its multi-site capabilities.
 
-#####setup
+####Setup
 
 * Setup virtual environment of choice
 * Clone repo
