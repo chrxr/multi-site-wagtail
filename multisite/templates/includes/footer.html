@@ -1,7 +1,22 @@
 {% load multisite_tags wagtailcore_tags %}
 
-{{ settings.utils.SocialMediaSettings.facebook }}
+{% with settings.utils.SocialMediaSettings as social %}
+<ul>
+{% if social.facebook %}
+<li><a href="{{ social.facebook }}">Facebook</a></li>
+{% endif %}
 
-{% for link in settings.utils.FooterLinks.related_links.all %}
-  {{ link.link }}
+{% if social.twitter %}
+<li><a href="http://www.twitter.com/{{ social.twitter }}">Twitter</a></li>
+{% endif %}
+
+{% endwith %}
+</ul>
+
+{% with settings.utils.FooterLinks as footer_links %}
+<ul>
+{% for link in footer_links.related_links.all %}
+  <li><a href="{{ link.link }}">{{ link.title }}</a></li>
 {% endfor %}
+</ul>
+{% endwith %}
