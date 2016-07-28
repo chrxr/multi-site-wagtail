@@ -8,7 +8,9 @@ This repo contains an example implementation of Wagtail, demonstrating its multi
 * Clone repo
 * cd multi-site-wagtail
 * pip install -r requirements.txt
-* ./manage.py migrate
+
+This implementation is equipped with a sqlite3 database with a superuser already created, so you should just be able to start it up.
+
 * ./manage.py runserver
 * Navigate to localhost:8000/admin
 * Login with username: admin, password: admin
