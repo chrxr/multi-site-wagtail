@@ -1,0 +1,7 @@
+{% load multisite_tags wagtailcore_tags %}
+
+{{ settings.utils.SocialMediaSettings.facebook }}
+
+{% for link in settings.utils.FooterLinks.related_links.all %}
+  {{ link.link }}
+{% endfor %}
