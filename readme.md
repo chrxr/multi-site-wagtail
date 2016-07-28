@@ -14,3 +14,8 @@ This implementation is equipped with a sqlite3 database with a superuser already
 * ./manage.py runserver
 * Navigate to localhost:8000/admin
 * Login with username: admin, password: admin
+
+This example implementation includes 3 sites. You can see these at the subdomains:
+
+* site2.localhost.com
+* site3.localhost.com
