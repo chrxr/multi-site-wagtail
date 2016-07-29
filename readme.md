@@ -14,7 +14,7 @@ This implementation is equipped with a SQLite database with a superuser already 
 * `./manage.py runserver`
 * Navigate to http://localhost:8000/admin
 * Login with username: admin, password: admin
-* Admin users for each individual site have also been set up with username: site-n-admin (e.g. site-1-admin), password: admin
+* Admin users for each of the 3 individual site have also been set up with username: site-n-admin (e.g. site-1-admin), password: admin
 
 This example implementation includes 3 sites. You can see these at the subdomains:
 
