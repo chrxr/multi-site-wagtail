@@ -1,15 +1,12 @@
 html {
-  height: 100%;
+  height:100%;
 }
 
 body {
   top:0;
   left:0;
-  height: 100%;
+  height:100%;
   background-color:#ffe0b3;
-}
-
-body {
 }
 
 
@@ -21,7 +18,7 @@ body {
 }
 
 .logo-container {
-  width:10%;
+  width:11%;
   float:left;
 }
 
@@ -33,7 +30,7 @@ body {
 .top-menu {
   float:right;
   width:89%;
-  padding-left:1%;
+  /*padding-left:1%;*/
 }
 
 .menu-list {
@@ -62,6 +59,7 @@ body {
   color:pink;
 }
 
+
 /* MAIN BODY */
 
 .body-container {
@@ -79,19 +77,18 @@ body {
 }
 
 
-
 /* FOOTER */
 
 .footer {
   width:100%;
   height:120px;
-  background-color: #d1e0e0;
+  background-color:#d1e0e0;
   padding-top:1em;
 }
 
 .social-links, .footer-links {
-  list-style: none;
-  text-align: center;
+  list-style:none;
+  text-align:center;
   margin:0;
   padding:10px 0;
   margin-bottom:1em;
@@ -102,12 +99,12 @@ body {
 }
 
 .footer-link {
-  display: inline-block;
+  display:inline-block;
   padding:0 10px;
 }
 
 .footer-link a {
-  text-decoration: none;
+  text-decoration:none;
   font-weight:bold;
   color:black;
 }
