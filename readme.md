@@ -27,6 +27,6 @@ To do:
 * [x] Footer, social media and branding settings
 * [x] Implement settings in templates
 * [x] Create sites
-* [ ] Create groups and users with limited permissions
+* [x] Create groups and users with limited permissions
 * [ ] Custom templates for specific sites
 * [ ] Site specific search
