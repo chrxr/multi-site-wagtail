@@ -7,7 +7,7 @@ from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailimages.blocks import ImageChooserBlock
 
-from wagtail.wagtailadmin.edit_handlers import (FieldPanel, InlinePanel, MultiFieldPanel, PageChooserPanel, StreamFieldPanel,)
+from wagtail.wagtailadmin.edit_handlers import (FieldPanel, InlinePanel, PageChooserPanel, MultiFieldPanel)
 
 from wagtail.contrib.settings.models import BaseSetting, register_setting
 
@@ -67,11 +67,11 @@ class SocialMediaSettings(BaseSetting):
 class FooterLinks(BaseSetting, ClusterableModel):
 
     panels = [
-        InlinePanel('related_links', label="Footer Links"),
+        InlinePanel('footer_links', label="Footer Links"),
     ]
 
 class FooterLinksRelatedLink(Orderable, RelatedLink):
-    page = ParentalKey('FooterLinks', related_name='related_links')
+    page = ParentalKey('FooterLinks', related_name='footer_links')
 
 @register_setting
 class SiteBranding(BaseSetting):

@@ -16,7 +16,7 @@
 
 {% with settings.utils.FooterLinks as footer_links %}
 <ul class='footer-links'>
-{% for link in footer_links.related_links.all %}
+{% for link in footer_links.footer_links.all %}
   <li class='footer-link'><a href="{{ link.link }}">{{ link.title }}</a></li>
 {% endfor %}
 </ul>
