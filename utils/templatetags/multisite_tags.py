@@ -1,9 +1,6 @@
 from django import template
 from django.conf import settings
 
-from standard_page.models import StandardPage
-from home.models import HomePage
-
 register = template.Library()
 
 
