@@ -20,3 +20,13 @@ This example implementation includes 3 sites. You can see these at the subdomain
 * localhost:8000
 * site2.localhost:8000
 * site3.localhost:8000
+
+To do:
+
+* [x] Build templates
+* [x] Footer, social media and branding settings
+* [x] Implement settings in templates
+* [x] Create sites
+* [ ] Create groups and users with limited permissions
+* [ ] Custom templates for specific sites
+* [ ] Site specific search
