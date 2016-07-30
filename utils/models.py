@@ -56,12 +56,14 @@ class SocialMediaSettings(BaseSetting):
     facebook = models.URLField(
         help_text='Your Facebook page URL',
         null=True,
-        blank=True)
+        blank=True
+    )
     twitter = models.CharField(
         max_length=255,
         help_text='Your Twitter username, without the @',
         null=True,
-        blank=True)
+        blank=True
+    )
 
 @register_setting
 class FooterLinks(BaseSetting, ClusterableModel):
@@ -80,9 +82,14 @@ class SiteBranding(BaseSetting):
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        related_name='+'
+        related_name='+',
     )
-    banner_colour = models.CharField(max_length=6, null=True, blank=True, help_text="Fill in a hex colour value")
+    banner_colour = models.CharField(
+        max_length=6,
+        null=True,
+        blank=True,
+        help_text="Fill in a hex colour value"
+    )
 
     panels = [
         ImageChooserPanel('site_logo'),
