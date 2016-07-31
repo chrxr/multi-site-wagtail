@@ -1,6 +1,8 @@
 {% load multisite_tags wagtailcore_tags %}
 
 <div class='footer'>
+    <!-- I've used 'with' here to avoid having to type out the long object name every time.-->
+
     {% with settings.utils.SocialMediaSettings as social %}
     <ul class='social-links'>
     {% if social.facebook %}

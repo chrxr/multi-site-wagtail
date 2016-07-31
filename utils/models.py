@@ -14,6 +14,11 @@ from wagtail.contrib.settings.models import BaseSetting, register_setting
 from modelcluster.fields import ParentalKey
 from modelcluster.models import ClusterableModel
 
+# The LinkFields and RelatedLink meta-models are taken from the WagtailDemo implementation.
+# They provide a multi-field panel that allows you to set a link title and choose either
+# an internal or external link. It also provides a custom property ('link') to simplify
+# using it in the template.
+
 class LinkFields(models.Model):
     link_external = models.URLField("External link", blank=True)
     link_page = models.ForeignKey(
@@ -38,8 +43,6 @@ class LinkFields(models.Model):
     class Meta:
         abstract = True
 
-
-# Related links
 class RelatedLink(LinkFields):
     title = models.CharField(max_length=255, help_text="Link title")
 
@@ -50,6 +53,9 @@ class RelatedLink(LinkFields):
 
     class Meta:
         abstract = True
+
+# The SocialMediaSettings model provides site-specific social media links.
+# These could be easily expanded to include any number of social media URLs / IDs.
 
 @register_setting
 class SocialMediaSettings(BaseSetting):
@@ -65,6 +71,8 @@ class SocialMediaSettings(BaseSetting):
         blank=True
     )
 
+# The FooterLinks model takes advantage of the RelatedLink model we implemented above.
+
 @register_setting
 class FooterLinks(BaseSetting, ClusterableModel):
 
@@ -74,6 +82,10 @@ class FooterLinks(BaseSetting, ClusterableModel):
 
 class FooterLinksRelatedLink(Orderable, RelatedLink):
     page = ParentalKey('FooterLinks', related_name='footer_links')
+
+# RE the SiteBranding model, you'll note that there's no custom-validation on the
+# banner_colour field to check that a valid hex value has been entered. This would
+# probably be better off as a select field with a set of predefined colour choices.
 
 @register_setting
 class SiteBranding(BaseSetting):
