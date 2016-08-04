@@ -2,6 +2,9 @@
 
 This repo contains an example implementation of Wagtail, demonstrating its multi-site capabilities.
 
+The blog post that accompanies this example implementation can be found here:
+https://wagtail.io/blog/multi-site-wagtail/
+
 ####Setup
 
 * Setup virtual environment of choice
