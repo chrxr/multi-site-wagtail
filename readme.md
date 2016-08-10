@@ -32,5 +32,3 @@ To do:
 * [x] Implement settings in templates
 * [x] Create sites
 * [x] Create groups and users with limited permissions
-* [ ] Custom templates for specific sites
-* [ ] Site specific search
